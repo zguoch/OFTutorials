@@ -31,8 +31,6 @@ compile:
   stage: build
   script:
     - public/latex && make 
-  dependencies:
-    - figures
   artifacts:
     untracked: true
     expire_in: 1 week
