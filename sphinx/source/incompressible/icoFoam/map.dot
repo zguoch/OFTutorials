@@ -17,8 +17,9 @@
       node [shape=plaintext]
       legend [
     fontname="Arial"
+    fontsize=8
    label=<
-     <table border="0" cellborder="1" cellspacing="5">
+     <table border="1" cellborder="1" cellspacing="5">
        <tr>
        <td bgcolor="lightgray">未解锁</td>
        <td bgcolor="yellow"><font color="black">正在完善中</font></td>
