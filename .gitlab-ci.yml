@@ -19,7 +19,23 @@ pages:
   - sphinx-build -b latex sphinx/source public/latex
   
   artifacts:
+    untracked: true
+    expire_in: 1 week
     paths:
     - public
+  only:
+  - master
+
+compile:
+  image: martisak/texlive2020
+  stage: build
+  script:
+    - public/latex && make 
+  dependencies:
+    - figures
+  artifacts:
+    untracked: true
+    expire_in: 1 week
+  when: on_success
   only:
   - master
