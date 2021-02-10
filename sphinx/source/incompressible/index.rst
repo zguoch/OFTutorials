@@ -9,7 +9,6 @@
       :align: center  
 
 .. toctree::
-   :maxdepth: 3
-   :caption: 目录
+   :maxdepth: 1
 
    icoFoam/index.rst   

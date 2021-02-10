@@ -45,7 +45,7 @@ extensions = ['sphinx.ext.mathjax',
               'sphinx.ext.ifconfig',
               'sphinx.ext.todo',
               'sphinx_sitemap',
-              'sphinx_tabs.tabs' #tab view extension
+              'sphinx_inline_tabs' #tab view extension
               ]
 sphinx_tabs_nowarn=True
 graphviz_output_format='svg'

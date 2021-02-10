@@ -9,9 +9,8 @@
       :align: center
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 1
    :caption: Contents
-   :numbered:
 
    incompressible/index.rst   
 
