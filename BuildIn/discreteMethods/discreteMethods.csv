@@ -1,0 +1,8 @@
+算例,领取人
+$FOAM_TUTORIALS/discreteMethods/molecularDynamics/mdEquilibrationFoam/periodicCubeArgon,
+$FOAM_TUTORIALS/discreteMethods/molecularDynamics/mdEquilibrationFoam/periodicCubeWater,
+$FOAM_TUTORIALS/discreteMethods/molecularDynamics/mdFoam/nanoNozzle,
+$FOAM_TUTORIALS/discreteMethods/dsmcFoam/supersonicCorner,
+$FOAM_TUTORIALS/discreteMethods/dsmcFoam/freeSpaceStream,
+$FOAM_TUTORIALS/discreteMethods/dsmcFoam/freeSpacePeriodic,
+$FOAM_TUTORIALS/discreteMethods/dsmcFoam/wedge15Ma5,

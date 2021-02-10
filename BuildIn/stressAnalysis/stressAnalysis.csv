@@ -1,0 +1,3 @@
+算例,领取人
+$FOAM_TUTORIALS/stressAnalysis/solidDisplacementFoam/plateHole,
+$FOAM_TUTORIALS/stressAnalysis/solidEquilibriumDisplacementFoam/beamEndLoad,

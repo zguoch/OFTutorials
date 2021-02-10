@@ -1,0 +1,3 @@
+算例,领取人
+$FOAM_TUTORIALS/electromagnetics/electrostaticFoam/chargedWire,
+$FOAM_TUTORIALS/electromagnetics/mhdFoam/hartmann,

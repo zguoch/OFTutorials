@@ -1,0 +1,5 @@
+算例,领取人
+$FOAM_TUTORIALS/basic/potentialFoam/cylinder,
+$FOAM_TUTORIALS/basic/potentialFoam/pitzDaily,
+$FOAM_TUTORIALS/basic/laplacianFoam/flange,
+$FOAM_TUTORIALS/basic/scalarTransportFoam/pitzDaily,
