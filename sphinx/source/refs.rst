@@ -8,6 +8,6 @@
 
 .. bibliography:: manual.bib
     :cited: 
-    :style: unsrt 
+    :style: apa 
 
     
