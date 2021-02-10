@@ -16,6 +16,8 @@ pages:
   - pip install sphinx==1.6.7
   - pip install sphinxcontrib-bibtex sphinx_inline_tabs sphinx_sitemap
   - sphinx-build -b html sphinx/source public
+  - sphinx-build -b latex sphinx/source public/latex
+  - cd public/latex && make 
   artifacts:
     paths:
     - public
