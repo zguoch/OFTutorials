@@ -1,0 +1,16 @@
+
+  digraph G {
+
+      icoFoam[label="icoFoam求解器", tooltip="简短介绍", fontname="Arial", fontsize=10, height=.8,width=.8,shape="ellipse",style="filled", color=none,fillcolor=orange,href="https://gitlab.com",target="_top"];
+
+      cavity[label="cavity", tooltip="cavity", fontname="Arial", fontsize=10, height=.35,width=.35,shape="box",style="filled", fillcolor=lightgray, color=gray,href="https://gitlab.com",target="_top"];
+      elbow[label="elbow", tooltip="elbow", fontname="Arial", fontsize=10, height=.35,width=.35,shape="box",style="filled", fillcolor=yellow, color=gray,href="https://gitlab.com",target="_top"];
+      user_1[label="用户贡献case1", tooltip="elbow", fontname="Arial", fontsize=10, height=.35,width=.35,shape="box",style="filled", fillcolor=greenyellow, color=gray,href="https://gitlab.com",target="_top"];
+      user_2[label="用户贡献case2", tooltip="elbow", fontname="Arial", fontsize=10, height=.35,width=.35,shape="box",style="filled", fillcolor=greenyellow, color=gray,href="https://gitlab.com",target="_top"];
+      // 连接
+      
+      icoFoam -> cavity;
+      icoFoam -> elbow;
+      icoFoam -> user_1;
+      icoFoam -> user_2;
+  }

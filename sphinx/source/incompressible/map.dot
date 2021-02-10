@@ -1,0 +1,29 @@
+
+  digraph G {
+
+      incompressible[label="不可压缩流", tooltip="简短介绍", fontname="Arial", fontsize=10, height=.8,width=.8,shape="ellipse",style="filled", color=none,fillcolor=lightblue,href="https://gitlab.com",target="_top"];
+
+      incompressible_SRFPimpleFoam[label="1", tooltip="SRFPimpleFoam", fontname="Arial", fontsize=10, height=.35,width=.35,shape="box",style="filled", fillcolor=lightgray, color=gray,href="https://gitlab.com",target="_top"];
+      incompressible_SRFSimpleFoam[label="2", tooltip="SRFSimpleFoam", fontname="Arial", fontsize=10, height=.35,width=.35,shape="box",style="filled", fillcolor=lightgray, color=gray,href="https://gitlab.com",target="_top"];
+      incompressible_adjointShapeOptimizationFoam[label="3", tooltip="adjointShapeOptimizationFoam", fontname="Arial", fontsize=10, height=.35,width=.35,shape="box",style="filled", fillcolor=lightgray, color=gray,href="https://gitlab.com",target="_top"];
+      incompressible_boundaryFoam[label="4", tooltip="boundaryFoam", fontname="Arial", fontsize=10, height=.35,width=.35,shape="box",style="filled", fillcolor=lightgray, color=gray,href="https://gitlab.com",target="_top"];
+      incompressible_icoFoam[label="5", tooltip="icoFoam", fontname="Arial", fontsize=10, height=.35,width=.35,shape="box",style="filled", fillcolor=orange, color=gray,href="https://oflab.gitlab.io/tutorials/incompressible/icoFoam/index.html",target="_top"];
+      incompressible_nonNewtonianIcoFoam[label="6", tooltip="nonNewtonianIcoFoam", fontname="Arial", fontsize=10, height=.35,width=.35,shape="box",style="filled", fillcolor=lightgray, color=gray,href="https://gitlab.com",target="_top"];
+      incompressible_pimpleFoam[label="7", tooltip="rhoSimpleFoam", fontname="Arial", fontsize=10, height=.35,width=.35,shape="box",style="filled", fillcolor=lightgray, color=gray,href="https://gitlab.com",target="_top"];
+      incompressible_pisoFoam[label="8", tooltip="pimpleFoam", fontname="Arial", fontsize=10, height=.35,width=.35,shape="box",style="filled", fillcolor=lightgray, color=gray,href="https://gitlab.com",target="_top"];
+      incompressible_porousSimpleFoam[label="9", tooltip="porousSimpleFoam", fontname="Arial", fontsize=10, height=.35,width=.35,shape="box",style="filled", fillcolor=lightgray, color=gray,href="https://gitlab.com",target="_top"];
+      incompressible_shallowWaterFoam[label="10", tooltip="shallowWaterFoam", fontname="Arial", fontsize=10, height=.35,width=.35,shape="box",style="filled", fillcolor=lightgray, color=gray,href="https://gitlab.com",target="_top"];
+      incompressible_simpleFoam[label="11", tooltip="simpleFoam", fontname="Arial", fontsize=10, height=.35,width=.35,shape="box",style="filled", fillcolor=lightgray, color=gray,href="https://gitlab.com",target="_top"];
+      // 连接
+      incompressible -> incompressible_SRFPimpleFoam;
+      incompressible -> incompressible_SRFSimpleFoam;
+      incompressible -> incompressible_adjointShapeOptimizationFoam;
+      incompressible -> incompressible_boundaryFoam;
+      incompressible -> incompressible_icoFoam;
+      incompressible -> incompressible_nonNewtonianIcoFoam;
+      incompressible -> incompressible_pimpleFoam;
+      incompressible -> incompressible_pisoFoam;
+      incompressible -> incompressible_porousSimpleFoam;
+      incompressible -> incompressible_shallowWaterFoam;
+      incompressible -> incompressible_simpleFoam;
+  }
