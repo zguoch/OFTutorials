@@ -1,0 +1,16 @@
+build*/
+__latex*.tex
+*.mo
+__pycache__
+parafoam_js
+
+*.log
+*.aux
+*.bbl
+*.blg
+*.gz
+[.tex
+_minted-manual
+*.idx
+*.toc
+*.out

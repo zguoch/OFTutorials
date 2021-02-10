@@ -1,0 +1,6 @@
+build
+_build
+*.zip
+source/_figures/*.pdf
+source/bibtex.json
+.python-version
