@@ -5,12 +5,12 @@
 
 一起努力点亮整个地图
 
-.. graphviz:: /../figures/dot/map_Tutorials_level1.dot
+.. graphviz:: map.dot
       :align: center
 
 .. toctree::
    :maxdepth: 1
-   :caption: Contents
+   :caption: 目录
 
    incompressible/index.rst   
 

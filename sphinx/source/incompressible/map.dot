@@ -26,4 +26,15 @@
       incompressible -> incompressible_porousSimpleFoam;
       incompressible -> incompressible_shallowWaterFoam;
       incompressible -> incompressible_simpleFoam;
+
+      node [shape=plaintext]
+      legend [
+    fontname="Arial"
+   label=<
+     <table border="0" cellborder="1" cellspacing="0">
+       <tr><td bgcolor="lightgray">未解锁</td></tr>
+       <tr><td bgcolor="orange"><font color="black">正在完善中</font></td></tr>
+       <tr><td bgcolor="lime"><font color="black">已完成</font></td></tr>
+     </table>>
+  ];
   }

@@ -1,5 +1,6 @@
 
   digraph G {
+    rankdir=LR
     // 第一级分类
       basic[label="基本", tooltip="简短介绍", fontname="Arial", fontsize=10, height=.8,width=.8,shape="octagon",style="filled", color=black,fillcolor=lightgreen,href="https://gitlab.com",target="_top"];
       combustion[label="燃烧", tooltip="简短介绍", fontname="Arial", fontsize=10, height=.8,width=.8,shape="octagon",style="filled", color=black,fillcolor=lightgreen,href="https://gitlab.com",target="_top"];

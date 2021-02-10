@@ -1,0 +1,37 @@
+
+  digraph G {
+      root[label="OpenFoam 求解器及算例一级分类", tooltip="简短介绍", fontname="Arial", fontsize=10, height=.8,width=.8,shape="ellipse",style="filled", color=none,fillcolor=lightblue,href="https://oflab.gitlab.io/tutorials/index.html",target="_top"];
+      
+    // 第一级分类
+      basic[label="基本", tooltip="简短介绍", fontname="Arial", fontsize=10, height=.8,width=.8,shape="octagon",style="filled", color=black,fillcolor=lightgray,href="https://oflab.gitlab.io/tutorials/basic/index.html",target="_top"];
+      combustion[label="燃烧", tooltip="简短介绍", fontname="Arial", fontsize=10, height=.8,width=.8,shape="octagon",style="filled", color=black,fillcolor=lightgray,href="https://oflab.gitlab.io/tutorials/combustion/index.html",target="_top"];
+      compressible[label="可压", tooltip="简短介绍", fontname="Arial", fontsize=10, height=.8,width=.8,shape="octagon",style="filled", color=black,fillcolor=lightgray,href="https://oflab.gitlab.io/tutorials/compressible/index.html",target="_top"];
+      incompressible[label="不可压", tooltip="简短介绍", fontname="Arial", fontsize=10, height=.8,width=.8,shape="octagon",style="filled", color=black,fillcolor=lightgreen,href="https://oflab.gitlab.io/tutorials/incompressible/index.html",target="_top"];
+      discreteMethods[label="离散法", tooltip="简短介绍", fontname="Arial", fontsize=10, height=.8,width=.8,shape="octagon",style="filled", color=black,fillcolor=lightgray,href="https://oflab.gitlab.io/tutorials/discreteMethods/index.html",target="_top"];
+      electromagnetics[label="电磁", tooltip="简短介绍", fontname="Arial", fontsize=10, height=.8,width=.8,shape="octagon",style="filled", color=black,fillcolor=lightgray,href="https://oflab.gitlab.io/tutorials/electromagnetics/index.html",target="_top"];
+      financial[label="金融", tooltip="简短介绍", fontname="Arial", fontsize=10, height=.8,width=.8,shape="octagon",style="filled", color=black,fillcolor=lightgray,href="https://oflab.gitlab.io/tutorials/financial/index.html",target="_top"];
+      heatTransfer[label="传热", tooltip="简短介绍", fontname="Arial", fontsize=10, height=.8,width=.8,shape="octagon",style="filled", color=black,fillcolor=lightgray,href="https://oflab.gitlab.io/tutorials/heatTransfer/index.html",target="_top"];
+      lagrangian[label="拉格朗日", tooltip="简短介绍", fontname="Arial", fontsize=10, height=.8,width=.8,shape="octagon",style="filled", color=black,fillcolor=lightgray,href="https://oflab.gitlab.io/tutorials/lagrangian/index.html",target="_top"];
+      
+      root -> basic;
+      root -> combustion;
+      root -> incompressible;
+      root -> compressible;
+      root -> discreteMethods;
+      root -> electromagnetics;
+      root -> financial;
+      root -> heatTransfer;
+      root -> lagrangian;
+
+    node [shape=plaintext]
+
+  legend [
+    fontname="Arial"
+   label=<
+     <table border="0" cellborder="1" cellspacing="0">
+       <tr><td bgcolor="lightgray">未解锁</td></tr>
+       <tr><td bgcolor="lightgreen"><font color="black">正在完善中</font></td></tr>
+       <tr><td bgcolor="lime"><font color="black">已完成</font></td></tr>
+     </table>>
+  ];
+  }

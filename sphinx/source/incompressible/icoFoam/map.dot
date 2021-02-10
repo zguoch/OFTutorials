@@ -1,16 +1,32 @@
 
   digraph G {
 
-      icoFoam[label="icoFoam求解器", tooltip="简短介绍", fontname="Arial", fontsize=10, height=.8,width=.8,shape="ellipse",style="filled", color=none,fillcolor=orange,href="https://gitlab.com",target="_top"];
+      icoFoam[label="icoFoam求解器", tooltip="简短介绍", fontname="Arial", fontsize=10, height=.8,width=.8,shape="cylinder",style="filled", color=lightblue,fillcolor=orange,href="https://gitlab.com",target="_top"];
 
       cavity[label="cavity", tooltip="cavity", fontname="Arial", fontsize=10, height=.35,width=.35,shape="box",style="filled", fillcolor=lightgray, color=gray,href="https://gitlab.com",target="_top"];
       elbow[label="elbow", tooltip="elbow", fontname="Arial", fontsize=10, height=.35,width=.35,shape="box",style="filled", fillcolor=yellow, color=gray,href="https://gitlab.com",target="_top"];
-      user_1[label="用户贡献case1", tooltip="elbow", fontname="Arial", fontsize=10, height=.35,width=.35,shape="box",style="filled", fillcolor=greenyellow, color=gray,href="https://gitlab.com",target="_top"];
-      user_2[label="用户贡献case2", tooltip="elbow", fontname="Arial", fontsize=10, height=.35,width=.35,shape="box",style="filled", fillcolor=greenyellow, color=gray,href="https://gitlab.com",target="_top"];
+      user_1[label="case1", tooltip="elbow", fontname="Arial", fontsize=10, height=.35,width=.35,shape="box",style="filled", fillcolor=greenyellow, color=gray,href="https://gitlab.com",target="_top"];
+      user_2[label="case2", tooltip="elbow", fontname="Arial", fontsize=10, height=.35,width=.35,shape="box",style="filled", fillcolor=greenyellow, color=gray,href="https://gitlab.com",target="_top"];
       // 连接
       
       icoFoam -> cavity;
       icoFoam -> elbow;
       icoFoam -> user_1;
       icoFoam -> user_2;
+
+      node [shape=plaintext]
+      legend [
+    fontname="Arial"
+   label=<
+     <table border="0" cellborder="1" cellspacing="0">
+       <tr>
+       <td bgcolor="lightgray">未解锁</td>
+       <td bgcolor="yellow"><font color="black">正在完善中</font></td>
+       </tr>
+       <tr>
+        <td bgcolor="greenyellow"><font color="black">用户贡献</font></td>
+        <td bgcolor="lime"><font color="black">已完成</font></td>
+       </tr>
+     </table>>
+  ];
   }
