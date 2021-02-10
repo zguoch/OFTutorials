@@ -2,9 +2,6 @@
     "cited": {
         "incompressible/icoFoam/cavity": [
             "ghia1982high"
-        ],
-        "incompressible/icoFoam/icoFoam": [
-            "ferziger2002computational"
         ]
     }
 }

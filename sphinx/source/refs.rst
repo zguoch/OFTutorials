@@ -3,11 +3,11 @@
 .. only:: html
 
     **************************
-    References
+    参考文献
     **************************
 
 .. bibliography:: manual.bib
     :cited: 
-    :style: apa 
+    :style: unsrt 
 
     
