@@ -1,12 +1,12 @@
-image: python:3.7-alpine
 
-before_script:
-- apk update
-- apk add doxygen
-## Uncomment the following line if you use graphviz dot graphs
-- apk add graphviz
+buildPages:
+  image: python:3.7-alpine
 
-pages:
+  before_script:
+  - apk update
+  - apk add doxygen
+  ## Uncomment the following line if you use graphviz dot graphs
+  - apk add graphviz
   script:
   # # doxygen documentation
   # - doxygen Doxyfile
@@ -26,11 +26,13 @@ pages:
   only:
   - master
 
-compile:
+buildPDF:
   image: martisak/texlive2020
   stage: build
   script:
     - public/latex && make 
+  dependencies:
+    - figures
   artifacts:
     untracked: true
     expire_in: 1 week
