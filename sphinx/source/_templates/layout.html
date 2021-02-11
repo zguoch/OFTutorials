@@ -28,7 +28,7 @@
       {% if not READTHEDOCS %}
         <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
           <span class="rst-current-version" data-toggle="rst-current-version">
-            <span class="fa fa-book"> Read the Docs</span>
+            <span class="fa fa-book"> OpenFOAM算例详解</span>
             v: latest
             <span class="fa fa-caret-down"></span>
           </span>
@@ -47,23 +47,7 @@
             </dl>
             <dl>
               <dt>{{ _('Downloads') }}</dt>
-              <dd><a href="#">PDF</a></dd>
-              <dd><a href="#">ePub</a></dd>
-              <dd><a href="#">HTML</a></dd>
-            </dl>
-            <dl>
-              {# Translators: The phrase "Read the Docs" is not translated #}
-              <dt>{{ _('On Read the Docs') }}</dt>
-                <dd>
-                  <a href="#">{{ _('Project Home') }}</a>
-                </dd>
-                <dd>
-                  <a href="#">{{ _('Builds') }}</a>
-                </dd>
-            </dl>
-            <dl>
-              <dt>Debug</dt>
-              <dd><a href="#" data-toggle="rst-debug-badge">Swap badge position</a></dd>
+              <dd><a href="{{ downloads_url }}/{{ latex_main }}.pdf">PDF</a></dd>
             </dl>
           </div>
         </div>

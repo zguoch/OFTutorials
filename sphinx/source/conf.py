@@ -94,17 +94,17 @@ html_theme_options = {
     'style_nav_header_background': 'purple',
     # 'gitlab_url': 'https://gitlab.com/gmdpapers/OpenFOAM算例详解'
 }
+# html_context定义的变量可以直接在html的模板中（比如layout.html）调用
 html_context = {
     "menu_links": [
         (
-            '<i class="fa fa-envelope fa-fw"></i> 联系大佬',
+            '<i class="fa fa-envelope fa-fw"></i> 联系方式',
             "mailto:xx@xx.com",
-        ),
-        (
-            '<i class="fa fa-book fa-fw"></i> PDF版本',
-            "https://oflab.gitlab.io/tutorials/downloads/OFTutorials_Main.pdf",
         )
     ],
+    'downloads_url':'https://oflab.gitlab.io/tutorials',
+    'latex_main':  project+'_latest', 
+    'test_versions': ['latest','1.0'] 
 }
  
 # favicon of the docs
@@ -158,7 +158,7 @@ imgmath_dvipng_args = ['-gamma', '1.5', '-bg', 'Transparent']
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'OFTutorials_Main.tex', 'OpenFOAM算例详解 Manual',
+    (master_doc, html_context['latex_main']+'.tex', 'OpenFOAM算例详解 Manual',
      '成员姓名+主要贡献者姓名', 'manual'),
 ]
 
