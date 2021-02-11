@@ -27,10 +27,9 @@ buildPages:
     - master
 
 buildPDF:
-  image: martisak/texlive2020
+  image: mirisbowring/texlive_ctan_full
   stage: build
   script:
-    - mpm --admin --install=ctex
     - cd public/latex && make 
   dependencies:
     - buildPages
