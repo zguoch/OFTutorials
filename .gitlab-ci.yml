@@ -1,5 +1,5 @@
 
-buildPages:
+pages:
   image: python:3.7-alpine
   stage: .pre
   before_script:
@@ -19,23 +19,23 @@ buildPages:
     - sphinx-build -b latex sphinx/source public/latex
   
   artifacts:
-    untracked: true
     expire_in: 1 week
     paths:
     - public
   only:
     - master
 
-buildPDF:
+compile:
   image: laurenss/texlive-full
   stage: build
   script:
     - cd public/latex && make 
   dependencies:
-    - buildPages
+    - pages
   artifacts:
-    untracked: true
     expire_in: 1 week
+    paths:
+    - public
   when: on_success
   only:
     - master
