@@ -1,5 +1,5 @@
 
-pages:
+buildPages:
   image: python:3.7-alpine
   stage: .pre
   before_script:
@@ -16,7 +16,7 @@ pages:
     - pip install sphinx==1.6.7
     - pip install sphinxcontrib-bibtex sphinx_inline_tabs sphinx_sitemap
     - sphinx-build -b html sphinx/source public
-    - sphinx-build -b latex sphinx/source public/latex
+    - sphinx-build -b latex sphinx/source latex
   
   artifacts:
     expire_in: 1 week
@@ -25,17 +25,31 @@ pages:
   only:
     - master
 
+
 compile:
   image: laurenss/texlive-full
   stage: deploy
   script:
     - cd public/latex && make 
   dependencies:
-    - pages
+    - buildPages
   artifacts:
     expire_in: 1 week
     paths:
     - public
   when: on_success
+  only:
+    - master
+
+pages:
+  image: python:3.7-alpine
+  script:
+    - mkdir public/downloads && cp latex/OFTutorials_Main.pdf public/downloads/OFTutorials_Main.pdf
+  dependencies:
+    - buildPages
+  artifacts:
+    expire_in: 1 week
+    paths:
+    - public
   only:
     - master

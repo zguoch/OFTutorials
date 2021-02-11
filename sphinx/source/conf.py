@@ -102,7 +102,7 @@ html_context = {
         ),
         (
             '<i class="fa fa-book fa-fw"></i> PDF版本',
-            "https://oflab.gitlab.io/tutorials/latex/OpenFOAM算例详解.pdf",
+            "https://oflab.gitlab.io/tutorials/downloads/OFTutorials_Main.pdf",
         )
     ],
 }
@@ -158,7 +158,7 @@ imgmath_dvipng_args = ['-gamma', '1.5', '-bg', 'Transparent']
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'OpenFOAM算例详解.tex', 'OpenFOAM算例详解 Manual',
+    (master_doc, 'OFTutorials_Main.tex', 'OpenFOAM算例详解 Manual',
      '成员姓名+主要贡献者姓名', 'manual'),
 ]
 
