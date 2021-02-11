@@ -26,9 +26,9 @@ buildPages:
     - master
 
 
-compile:
+latex:
   image: laurenss/texlive-full
-  stage: deploy
+  stage: build
   script:
     - cd public/latex && make 
   dependencies:
@@ -46,7 +46,7 @@ pages:
   script:
     - mkdir public/downloads && cp latex/OFTutorials_Main.pdf public/downloads/OFTutorials_Main.pdf
   dependencies:
-    - buildPages
+    - latex
   artifacts:
     expire_in: 1 week
     paths:
