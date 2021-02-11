@@ -27,9 +27,7 @@ pages:
 
 compile:
   image: laurenss/texlive-full
-  stages: 
-    - build
-    - deploy
+  stage: deploy
   script:
     - cd public/latex && make 
   dependencies:
