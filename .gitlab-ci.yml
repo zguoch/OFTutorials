@@ -30,7 +30,7 @@ latex:
   image: laurenss/texlive-full
   stage: build
   script:
-    - cd public/latex && make 
+    - cd latex && make 
   dependencies:
     - buildPages
   artifacts:
