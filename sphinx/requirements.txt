@@ -1,4 +1,0 @@
-sphinxcontrib-bibtex 
-sphinx_inline_tabs 
-sphinx_sitemap
-# pybtex

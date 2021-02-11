@@ -44,7 +44,8 @@ latex:
 pages:
   image: python:3.7-alpine
   script:
-    - mkdir public/downloads && cp public/latex/OFTutorials_Main.pdf public/downloads/OFTutorials_Main.pdf
+    - mkdir public/downloads && cp public/latex/OpenFOAM算例详解_latest.pdf public/downloads/OpenFOAM算例详解_latest.pdf
+    - rm -rf public/latex
   dependencies:
     - latex
   artifacts:
