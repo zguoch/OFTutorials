@@ -1,22 +1,22 @@
 
 buildPages:
   image: python:3.7-alpine
-
+  stage: .pre
   before_script:
-  - apk update
-  - apk add doxygen
-  ## Uncomment the following line if you use graphviz dot graphs
-  - apk add graphviz
+    - apk update
+    - apk add doxygen
+    ## Uncomment the following line if you use graphviz dot graphs
+    - apk add graphviz
   script:
   # # doxygen documentation
   # - doxygen Doxyfile
   # - mv doxygen/html/ public/
   # sphinx manual
   # to use sphinxcontrib-bibtex, the sphinx version must be 1.6.7 or lower
-  - pip install sphinx==1.6.7
-  - pip install sphinxcontrib-bibtex sphinx_inline_tabs sphinx_sitemap
-  - sphinx-build -b html sphinx/source public
-  - sphinx-build -b latex sphinx/source public/latex
+    - pip install sphinx==1.6.7
+    - pip install sphinxcontrib-bibtex sphinx_inline_tabs sphinx_sitemap
+    - sphinx-build -b html sphinx/source public
+    - sphinx-build -b latex sphinx/source public/latex
   
   artifacts:
     untracked: true
@@ -24,13 +24,13 @@ buildPages:
     paths:
     - public
   only:
-  - master
+    - master
 
 buildPDF:
   image: martisak/texlive2020
   stage: build
   script:
-    - public/latex && make 
+    - cd public/latex && make 
   dependencies:
     - buildPages
   artifacts:
@@ -38,4 +38,4 @@ buildPDF:
     expire_in: 1 week
   when: on_success
   only:
-  - master
+    - master
