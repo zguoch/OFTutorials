@@ -132,10 +132,6 @@ latex_elements = {
     'inputenc': '',
     'babel': r'''\usepackage[english]{babel}''',
     'preamble': r'''\usepackage{ctex}
-\definecolor{FOAM_green}{rgb}{0.27,0.49,0.36}
-\setCJKsansfont{Source Han Sans CN} %为中文和英文设置特定字体
-\setsansfont{Source Han Sans CN}
-\setmainfont{Arial}
 \geometry{
 	a4paper, 
 	nomarginpar,
