@@ -102,7 +102,7 @@ html_context = {
             "mailto:xx@xx.com",
         )
     ],
-    'downloads_url':'https://oflab.gitlab.io/tutorials',
+    'downloads_url':'https://oflab.gitlab.io/tutorials/downloads',
     'latex_main':  project+'_latest', 
     'test_versions': ['latest','1.0'] 
 }
