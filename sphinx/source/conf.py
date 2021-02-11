@@ -102,7 +102,7 @@ html_context = {
         ),
         (
             '<i class="fa fa-book fa-fw"></i> PDF版本',
-            "https://gitlab.com/OFLab/tutorials",
+            "https://oflab.gitlab.io/tutorials/latex/OpenFOAM算例详解.pdf",
         )
     ],
 }
