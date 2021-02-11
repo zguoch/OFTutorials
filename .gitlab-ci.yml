@@ -27,7 +27,7 @@ pages:
 
 compile:
   image: laurenss/texlive-full
-  stage: 
+  stages: 
     - build
     - deploy
   script:
