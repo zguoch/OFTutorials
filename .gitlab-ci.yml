@@ -30,6 +30,7 @@ buildPDF:
   image: martisak/texlive2020
   stage: build
   script:
+    - mpm --admin --install=ctex
     - cd public/latex && make 
   dependencies:
     - buildPages
