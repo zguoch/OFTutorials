@@ -16,7 +16,7 @@ buildPages:
     - pip install sphinx==1.6.7
     - pip install sphinxcontrib-bibtex sphinx_inline_tabs sphinx_sitemap
     - sphinx-build -b html sphinx/source public
-    - sphinx-build -b latex sphinx/source latex
+    - sphinx-build -b latex sphinx/source public/latex
   
   artifacts:
     expire_in: 1 week
@@ -30,7 +30,7 @@ latex:
   image: laurenss/texlive-full
   stage: build
   script:
-    - cd latex && make 
+    - cd public/latex && make 
   dependencies:
     - buildPages
   artifacts:
@@ -44,7 +44,7 @@ latex:
 pages:
   image: python:3.7-alpine
   script:
-    - mkdir public/downloads && cp latex/OFTutorials_Main.pdf public/downloads/OFTutorials_Main.pdf
+    - mkdir public/downloads && cp public/latex/OFTutorials_Main.pdf public/downloads/OFTutorials_Main.pdf
   dependencies:
     - latex
   artifacts:
