@@ -4,7 +4,7 @@ on:
     branches: master
 jobs:
   test:
-    name: test
+    name: html
     runs-on: ubuntu-latest
     steps:
       - name: Set up Python 3.9
@@ -24,10 +24,11 @@ jobs:
           sphinx-build -b html sphinx/source public
           sphinx-build -b latex sphinx/source public/latex
   makepdf:
-    name: test
-    runs-on: docker://laurenss/texlive-full:latest
+    name: pdf
+    runs-on: ubuntu-latest
     steps:
       - name: build latex
+        uses: docker://laurenss/texlive-full
         run: |
           cd public/latex && make 
       - uses: actions/upload-artifact@v2
