@@ -23,6 +23,7 @@ jobs:
           ls .
           sphinx-build -b html sphinx/source public
           sphinx-build -b latex sphinx/source public/latex
+          cd public/latex && make 
       - uses: actions/upload-artifact@v2
         with:
           name: manual.zip
