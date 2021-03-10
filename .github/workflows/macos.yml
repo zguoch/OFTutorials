@@ -7,13 +7,17 @@ jobs:
     name: test
     runs-on: ubuntu-latest
     steps:
-      - name: setup python 3
-        uses: docker://python:3.7-alpine
-      - name: step1
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+      - name: Install dependencies
         run: |
           pip --version
           pip install sphinx==1.6.7 
           pip install sphinxcontrib-bibtex sphinx_inline_tabs sphinx_sitemap
+      - name: build manual
+        run: |
           sphinx-build -b html sphinx/source public
           sphinx-build -b latex sphinx/source public/latex
       - uses: actions/upload-artifact@v2
