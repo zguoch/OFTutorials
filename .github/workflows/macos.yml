@@ -23,10 +23,6 @@ jobs:
           ls .
           sphinx-build -b html sphinx/source public
           sphinx-build -b latex sphinx/source public/latex
-  makepdf:
-    name: pdf
-    runs-on: ubuntu-latest
-    steps:
       - name: setup latex env
         uses: docker://laurenss/texlive-full
       - name: build latex
