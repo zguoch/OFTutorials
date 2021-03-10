@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: setup python 3
-        uses: docker://python:3.7-alpine:latest
+        uses: docker://python:3.7-alpine
       - name: step1
         run: |
           pip --version
