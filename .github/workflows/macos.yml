@@ -19,4 +19,4 @@ jobs:
       - name: build manual
         run: |
           ls ./
-          ls ./sphinx
+          pwd
