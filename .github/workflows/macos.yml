@@ -16,10 +16,19 @@ jobs:
           pip --version
           pip install sphinx==1.6.7 
           pip install sphinxcontrib-bibtex sphinx_inline_tabs sphinx_sitemap
+      # need checkout to copy the latest source files to the current path
       - uses: actions/checkout@v2
       - name: build manual
         run: |
-          ls ./
-          pwd
-          ls /home/runner/work/OFTutorials/OFTutorials
-          ls /home/runner/work/OFTutorials
+          ls .
+          sphinx-build -b html sphinx/source public
+          sphinx-build -b latex sphinx/source public/latex
+      - uses: actions/upload-artifact@v2
+        with:
+          name: manual.zip
+          path: pages
+      - name: step2
+        run: |
+          mkdir build
+          doxygen --version
+          graphviz --version
