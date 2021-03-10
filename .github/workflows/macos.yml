@@ -8,6 +8,6 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: step1
-        run: echo "hello world"
+        run: pip install sphinx==1.6.7
       - name: step2
         run: mkdir build
