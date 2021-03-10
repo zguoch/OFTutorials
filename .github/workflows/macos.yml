@@ -27,8 +27,9 @@ jobs:
     name: pdf
     runs-on: ubuntu-latest
     steps:
-      - name: build latex
+      - name: setup latex env
         uses: docker://laurenss/texlive-full
+      - name: build latex
         run: |
           cd public/latex && make 
       - uses: actions/upload-artifact@v2
