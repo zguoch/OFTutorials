@@ -8,6 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: step1
+        with:
+          python-version: 3.9
         run: |
           pip --version
           pip install sphinx==1.6.7 
