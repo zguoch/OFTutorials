@@ -9,16 +9,16 @@ jobs:
     steps:
       - name: step1
         run: |
-        pip install sphinx==1.6.7
-        pip install sphinxcontrib-bibtex sphinx_inline_tabs sphinx_sitemap
-        sphinx-build -b html sphinx/source public
-        sphinx-build -b latex sphinx/source public/latex
+          pip install sphinx==1.6.7 
+          pip install sphinxcontrib-bibtex sphinx_inline_tabs sphinx_sitemap
+          sphinx-build -b html sphinx/source public
+          sphinx-build -b latex sphinx/source public/latex
       - uses: actions/upload-artifact@v2
         with:
           name: manual.zip
           path: pages
       - name: step2
         run: |
-        mkdir build
-        doxygen --version
-        graphviz --version
+          mkdir build
+          doxygen --version
+          graphviz --version
