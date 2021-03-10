@@ -23,8 +23,7 @@ jobs:
           ls .
           sphinx-build -b html sphinx/source public
           sphinx-build -b latex sphinx/source public/latex
-      - name: setup latex env
-        uses: docker://laurenss/texlive-full
+      - uses: docker://laurenss/texlive-full
       - name: build latex
         run: |
           cd public/latex && make 
