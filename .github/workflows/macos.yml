@@ -25,8 +25,9 @@ jobs:
           sphinx-build -b latex sphinx/source public/latex
       - uses: docker://laurenss/texlive-full
       - name: build latex
-        run: |
-          cd public/latex && make 
+        uses: dante-ev/latex-action@master
+          with:
+            root_file: public/latex/OpenFOAM算例详解_latest.tex
       - uses: actions/upload-artifact@v2
         with:
           name: manual.zip
