@@ -29,6 +29,6 @@ jobs:
       run: |
         cd public/latex && make 
     - uses: actions/upload-artifact@v2
-        with:
-          name: manual.zip
-          path: pages
+      with:
+        name: manual.zip
+        path: pages
