@@ -16,7 +16,7 @@ jobs:
           pip --version
           pip install sphinx==1.6.7 
           pip install sphinxcontrib-bibtex sphinx_inline_tabs sphinx_sitemap
-          apk add graphviz
+          apt-get install graphviz
       # need checkout to copy the latest source files to the current path
       - uses: actions/checkout@v2
       - name: build manual
