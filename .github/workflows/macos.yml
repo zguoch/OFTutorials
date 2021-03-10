@@ -20,3 +20,5 @@ jobs:
         run: |
           ls ./
           pwd
+          ls /home/runner/work/OFTutorials/OFTutorials
+          ls /home/runner/work/OFTutorials
