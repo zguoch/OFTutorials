@@ -16,6 +16,7 @@ jobs:
           pip --version
           pip install sphinx==1.6.7 
           pip install sphinxcontrib-bibtex sphinx_inline_tabs sphinx_sitemap
+      - uses: actions/checkout@v2
       - name: build manual
         run: |
           ls ./
