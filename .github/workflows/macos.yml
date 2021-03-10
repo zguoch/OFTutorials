@@ -23,12 +23,19 @@ jobs:
           ls .
           sphinx-build -b html sphinx/source public
           sphinx-build -b latex sphinx/source public/latex
-      - name: build latex
-        uses: dante-ev/latex-action@master
+      - uses: docker://laurenss/texlive-full
         with:
-          root_file: public/latex/OpenFOAM算例详解_latest.tex
-          compiler: latexmk
-          working_directory: public/latex
+        entrypoint: /bin/echo
+        args: The ${{ github.event_name }} event triggered this step.
+      # - name: build latex
+      #   run: |
+      #     cd public/latex && make 
+      # - name: build latex
+      #   uses: dante-ev/latex-action@master
+      #   with:
+      #     root_file: public/latex/OpenFOAM算例详解_latest.tex
+      #     compiler: latexmk
+      #     working_directory: public/latex
       - uses: actions/upload-artifact@v2
         with:
           name: manual.zip
