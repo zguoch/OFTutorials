@@ -23,9 +23,12 @@ jobs:
           ls .
           sphinx-build -b html sphinx/source public
           sphinx-build -b latex sphinx/source public/latex
-          cd public/latex && make 
-      - uses: actions/upload-artifact@v2
+  makepdf:
+    - name: build latex
+      uses: docker://laurenss/texlive-full:latest
+      run: |
+        cd public/latex && make 
+    - uses: actions/upload-artifact@v2
         with:
           name: manual.zip
           path: pages
-      
