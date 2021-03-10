@@ -3,3 +3,13 @@ on:
   push:
     branches: main
    
+jobs:
+  test:
+    name: test
+    runs-on: macos-latest
+    steps:
+      - name: step1
+        run: echo "hello world"
+      - name: step2
+        run: |
+          mkdir build
