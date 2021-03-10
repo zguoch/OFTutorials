@@ -21,15 +21,5 @@ jobs:
           pip install sphinxcontrib-bibtex sphinx_inline_tabs sphinx_sitemap
       - name: build manual
         run: |
-          ls .
-          sphinx-build -b html sphinx/source public
-          sphinx-build -b latex sphinx/source public/latex
-      - uses: actions/upload-artifact@v2
-        with:
-          name: manual.zip
-          path: pages
-      - name: step2
-        run: |
-          mkdir build
-          doxygen --version
-          graphviz --version
+          ls ./
+          ls ./sphinx
